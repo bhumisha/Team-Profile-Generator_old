@@ -1,0 +1,29 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Team-Profile-Generator is collecting user's team information and creating nice team cards in HTML using node.js. It run only thru terminal. To developed this project, I have used file and inquirer node modules. Team is divided in Manager / Engineer and Intern. User can add n number of team member based on their role. User has to provide Github details and also school and project related informations. This project is deployed in Github. User can go thru files and clone the project.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest",
+    "format": "prettier"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhumisha/TeamData.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhumisha/TeamData/issues"
+  },
+  "homepage": "https://github.com/bhumisha/TeamData#readme",
+  "dependencies": {
+    "jest": "^26.6.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
