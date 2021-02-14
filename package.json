@@ -6,24 +6,23 @@
   "directories": {
     "lib": "lib"
   },
-  "scripts": {
-    "test": "jest",
-    "format": "prettier"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bhumisha/TeamData.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bhumisha/TeamData/issues"
-  },
-  "homepage": "https://github.com/bhumisha/TeamData#readme",
   "dependencies": {
     "jest": "^26.6.3"
   },
   "devDependencies": {
     "prettier": "^2.2.1"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhumisha/Team-Profile-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhumisha/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/bhumisha/Team-Profile-Generator#readme"
 }
