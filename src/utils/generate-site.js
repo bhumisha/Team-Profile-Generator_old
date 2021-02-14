@@ -14,7 +14,7 @@ const writeFile = fileContent => {
         // if everything went well, resolve the Promise and send the successful data to the `.then()` method
         resolve({
           ok: true,
-          message: 'File created!'
+          message: 'HTMl File created!'
         });
       });
     });
@@ -23,14 +23,14 @@ const writeFile = fileContent => {
 const copyFile =  () => {
     return new Promise((resolve,reject) =>
     {
-        fs.copyFile('./style.css', '../dist/style.css', err => {
+        fs.copyFile('./assets/css/style.css', '../dist/style.css', err => {
             if (err) {
              reject(err);
             return;
             }
             resolve({
                 ok: true,
-                message: 'File Copied!'
+                message: 'Style Sheet File Copied!'
               });
           });
     });

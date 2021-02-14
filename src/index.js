@@ -13,7 +13,7 @@ const employeeRolePrompt = () =>{
             type: 'list',
             name: 'role',
             message: "Which type of team member whould you like to add?",
-            choices:['Manager','Engineer','Intern','None']
+            choices:['Manager','Engineer','Intern','No more team member']
         }
     ]);
 };
@@ -118,20 +118,18 @@ return inquirer.prompt([
     ])
 };
 
-function init() {
+function buildTeam() {
 
     employeeRolePrompt()
     .then((employeeRole)=>{
-        console.log(  `employeeRole ${employeeRole.role}` )
-        if(employeeRole.role!='None'){
+        if(employeeRole.role!='No more team member'){
             return promtSuperEmployee(employeeRole.role).then((data)=> {
                 switch(employeeRole.role){
                     case "Manager": {
                         promtManager().then(officeNumberdata => {
                             const managerObj = new Manager(data.name,data.employeeId,data.email,officeNumberdata.officeNumber,employeeRole.role);
                             teamDetail.push(managerObj);
-                            console.log(teamDetail);
-                            return init();
+                            return buildTeam();
                         })
                         break;
                     }
@@ -139,8 +137,7 @@ function init() {
                         promptEngineer().then(githubData => {
                             const engineerObj = new Engineer(data.name,data.employeeId,data.email,githubData.githubUsername,employeeRole.role);
                             teamDetail.push(engineerObj);
-                            console.log(teamDetail);  
-                            return init();
+                            return buildTeam();
                         })
                         break;
                     }
@@ -148,8 +145,7 @@ function init() {
                         promptIntern().then(schoolData => {
                             const internObj = new Intern(data.name,data.employeeId,data.email,schoolData.school,employeeRole.role);
                             teamDetail.push(internObj);
-                            console.log(teamDetail);  
-                            return init();
+                            return buildTeam();
                         })
                         break;
                     }
@@ -170,6 +166,6 @@ function init() {
         console.log(err);
     });     
   }
-
+  console.log("Please build your team!!\n")
 // Function call to initialize app
-init();  
+buildTeam();  
