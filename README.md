@@ -18,7 +18,7 @@ than run node index.js will prompt user for team information and its team-profil
 We have also introduce Jest for unit testing. For each classes object we have completed unit testing.
 All code is written in ES6 and HTML. 
 
-Please find Project execution video @ ![here](src/assets/images/ScreenRecording-TeamBuilding.mov)
+Please find Project execution video @ ![here](src/assets/images/teamProfileBuilder.mov)
 
 **Jest UnitTest Coverage**
 
